@@ -1,0 +1,43 @@
+@font-face {
+  font-display: block;
+  font-family: "AUTHENTIC Sans";
+  src: local("AUTHENTIC Sans"),
+    url("assets/fonts/AUTHENTICSans-60.woff2") format("woff2"),
+    url("assets/fonts/AUTHENTICSans-60.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+  unicode-range: U+0000-DFFF, U+F900-FFFD;
+}
+
+@font-face {
+  font-display: block;
+  font-family: "AUTHENTIC Sans";
+  src: local("AUTHENTIC Sans"),
+    url("assets/fonts/AUTHENTICSans-90.woff2") format("woff2"),
+    url("assets/fonts/AUTHENTICSans-90.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+  unicode-range: U+0000-DFFF, U+F900-FFFD;
+}
+
+@font-face {
+  font-display: block;
+  font-family: "AUTHENTIC Sans";
+  src: local("AUTHENTIC Sans"),
+    url("assets/fonts/AUTHENTICSans-130.woff2") format("woff2"),
+    url("assets/fonts/AUTHENTICSans-130.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+  unicode-range: U+0000-DFFF, U+F900-FFFD;
+}
+
+@font-face {
+  font-display: block;
+  font-family: "AUTHENTIC Sans";
+  src: local("AUTHENTIC Sans"),
+    url("assets/fonts/AUTHENTICSans-150.woff2") format("woff2"),
+    url("assets/fonts/AUTHENTICSans-150.woff") format("woff");
+  font-style: normal;
+  font-weight: bold;
+  unicode-range: U+0000-DFFF, U+F900-FFFD;
+}
