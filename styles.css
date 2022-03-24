@@ -52,7 +52,9 @@ body {
 }
 
 .page > header {
-  height: 575px;
+  max-height: 900px;
+  min-height: 700px;
+  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
