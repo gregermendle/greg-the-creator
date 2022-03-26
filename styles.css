@@ -1,7 +1,30 @@
 :root {
   --page-padding: 60px;
+}
+
+.purple {
   --primary-color: #491df6;
   --background-color: #f3defa;
+}
+
+.orange {
+  --primary-color: #ff4700;
+  --background-color: #fae5de;
+}
+
+.green {
+  --primary-color: #557029;
+  --background-color: #f1fade;
+}
+
+.gray {
+  --primary-color: black;
+  --background-color: #ebebeb;
+}
+
+.red {
+  --primary-color: #7a3c3c;
+  --background-color: #fadede;
 }
 
 * {
@@ -19,7 +42,8 @@ body {
 }
 
 body {
-  margin: 5vw;
+  padding: 5vw;
+  margin: 0;
   font-display: optional;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -137,8 +161,114 @@ section > p {
   margin: 28px 0 0 28px;
 }
 
+#popsicle-button {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  padding: 0 20px;
+}
+
+#popsicle-button:focus-visible {
+  border-left: 1px solid var(--primary-color);
+  border-right: 1px solid var(--primary-color);
+}
+
 .popsicle {
   height: 80px;
+}
+
+@-webkit-keyframes spin-shoot {
+  0% {
+    -webkit-transform: translate(0, 0) scale(0.6) rotate(0deg);
+    transform: translate(0, 0) scale(0.6) rotate(0deg);
+    opacity: 0;
+    width: 0;
+  }
+  30% {
+    width: 20px;
+  }
+  75% {
+    -webkit-transform: translate(0, -30px) scale(1) rotate(360deg);
+    transform: translate(0, -30px) scale(1) rotate(360deg);
+    opacity: 1;
+    width: 20px;
+  }
+  100% {
+    -webkit-transform: scale(0.6) rotate(0deg);
+    transform: scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spin-shoot {
+  0% {
+    -webkit-transform: translate(0, 0) scale(0.6) rotate(0deg);
+    transform: translate(0, 0) scale(0.6) rotate(0deg);
+    opacity: 0;
+    width: 0;
+  }
+  30% {
+    width: 20px;
+  }
+  75% {
+    -webkit-transform: translate(0, -30px) scale(1) rotate(360deg);
+    transform: translate(0, -30px) scale(1) rotate(360deg);
+    opacity: 1;
+    width: 20px;
+  }
+  100% {
+    -webkit-transform: scale(0.6) rotate(0deg);
+    transform: scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+.particles {
+  -webkit-transform: translate(0, 22px);
+  -ms-transform: translate(0, 22px);
+  transform: translate(0, 22px);
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 12px);
+  grid-template-areas:
+    ". . t . ."
+    ". sq . l ."
+    "o . . . st";
+}
+
+.triangle {
+  grid-area: t;
+}
+
+.square {
+  grid-area: sq;
+}
+
+.squiggle {
+  grid-area: l;
+}
+
+.octo {
+  grid-area: o;
+}
+
+.star {
+  grid-area: st;
+}
+
+.play-particles {
+  -webkit-animation-name: spin-shoot;
+  animation-name: spin-shoot;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+}
+
+.particles svg {
+  width: 0;
+  -webkit-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  transform: scale(0.6);
 }
 
 footer {
