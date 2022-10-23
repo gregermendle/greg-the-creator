@@ -19,6 +19,7 @@ body {
   letter-spacing: 0.04em;
   color: var(--primary-color);
   background-color: var(--background-color);
+  min-height: 100vh;
 }
 
 body {
@@ -28,6 +29,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page {
@@ -36,6 +40,7 @@ body {
   border: 1px solid var(--primary-color);
   padding: 0 25px;
   border-radius: 3px;
+  width: 100%;
 }
 
 .burst {
@@ -64,7 +69,7 @@ body {
   font-size: 26px;
 }
 
-.resume {
+.container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(auto, 460px));
   justify-content: space-between;
@@ -92,16 +97,22 @@ section > p {
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-top: 100px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 75px;
+}
+
+.blob {
+  padding-bottom: 75px;
+  opacity: 0.8;
 }
 
 @media only screen and (max-width: 610px) {
+  body {
+    align-items: flex-start;
+  }
+
   .burst {
     width: calc(161px / 2.5);
     height: calc(161px / 2.5);
@@ -122,7 +133,7 @@ footer {
     font-size: 22px;
   }
 
-  .resume {
+  .container {
     gap: 30px;
   }
 }
